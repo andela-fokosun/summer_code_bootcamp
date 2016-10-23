@@ -1,3 +1,4 @@
+// object literal pattern
 var transition = {
     quotes: [
         'Welcome to Andela',
@@ -62,7 +63,7 @@ var portfolio = {
   olaide_ojewale: {
     gender: 'male',
     occupation: 'programmer',
-    pet: 'none'
+    pet: 'dogs'
   },
 
   init: function() {
@@ -81,7 +82,38 @@ var portfolio = {
 
 };
 
+function addClearTodoItem(){
+    var exhibition = document.getElementById("jsexhibition");
+
+    // create clear list button and append to dom
+    var button = document.createElement("BUTTON");
+    button.id="clear";
+    button.innerHTML = "Clear list";
+    exhibition.appendChild(button);
+
+    // listen and wait for the clear list button to be clikked
+    button.addEventListener ("click", function() {
+        var result = document.getElementById("result");
+        while (result.hasChildNodes()) {   
+            result.removeChild(result.firstChild);
+        }
+    });
+
+    var add = document.getElementById("add");
+
+    add.addEventListener("click", function(){
+        var todo = document.getElementById("todo");
+        var item = todo.value;
+        todo.value = "";
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode(item);
+        node.appendChild(textnode); 
+        var result = document.getElementById("result").appendChild(node);
+    })
+}
+
 window.onload = function() {
     transition.init();
+    addClearTodoItem();
     portfolio.init();
 }
