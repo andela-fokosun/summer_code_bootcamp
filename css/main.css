@@ -1,4 +1,29 @@
+html {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
 body {
-    width: 100%;
-    margin: auto;
+  background: #EDEDED;
+}
+
+header {
+  background-color: black;
+}
+
+nav {
+
+}
+
+p, h1,h2,,h3,h4,h5,h6 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+footer {
+
+}
+
+#banner {
+  margin-left: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
