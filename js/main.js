@@ -1,12 +1,17 @@
 var transition = {
-    quotes: ['first', 'second', 'third', 'fourth', 'fifth'],
+    quotes: [
+        'Welcome to Andela',
+        'Welcome to Digital Bootcamp', 
+        'Be the first to know how to do this', 
+        'take your time to read this', 
+        'fifth heroku'
+     ],
     transition_index: 0,
     template: document.getElementById('quotes'),
 
 
     init: function() {
         transition.textTransit();
-        // transition.nextWord();
     },
 
     nextWord: function() {
