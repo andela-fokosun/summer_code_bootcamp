@@ -113,7 +113,7 @@ function addClearTodoItem(){
 }
 
 window.onload = function() {
-    transition.init();
+    // transition.init();
     addClearTodoItem();
     portfolio.init();
 }
