@@ -94,7 +94,7 @@ function addClearTodoItem(){
     // listen and wait for the clear list button to be clikked
     button.addEventListener ("click", function() {
         var result = document.getElementById("result");
-        while (result.hasChildNodes()) {   
+        while (result.hasChildNodes()) {
             result.removeChild(result.firstChild);
         }
     });
@@ -107,13 +107,13 @@ function addClearTodoItem(){
         todo.value = "";
         var node = document.createElement("LI");
         var textnode = document.createTextNode(item);
-        node.appendChild(textnode); 
+        node.appendChild(textnode);
         var result = document.getElementById("result").appendChild(node);
     })
 }
 
 window.onload = function() {
-    transition.init();
-    addClearTodoItem();
+    // transition.init();
+    // addClearTodoItem();
     portfolio.init();
 }
