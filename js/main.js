@@ -112,8 +112,18 @@ function addClearTodoItem(){
     })
 }
 
+var nameField = document.getElementById('nameField');
+nameField.onkeydown = updateNameDisplay;
+nameField.onkeyup = updateNameDisplay;
+nameField.onkeypress = updateNameDisplay;
+
+function updateNameDisplay() {
+  document.getElementById('nameDisplay').innerHTML = this.value || "Display";
+}
+
 window.onload = function() {
     // transition.init();
     addClearTodoItem();
     portfolio.init();
+    updateNameDisplay();
 }
