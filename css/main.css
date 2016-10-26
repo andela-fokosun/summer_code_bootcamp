@@ -75,10 +75,13 @@ footer {
 .flex-grid {
     display: flex;
     justify-content: space-around;
+    box-shadow: 0px 0px 20px;
 }
 
 .flex-grid .col {
-    max-width: 34%
+    max-width: 34%;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
 }
 
 .flex-grid .col p {
@@ -114,11 +117,11 @@ input[type=text] {
 }
 
 #clear {
-  background-color: skyblue;
+  background-color: green;
 }
 
 #add {
-  background-color: skyblue;
+  background-color: green;
   height: 50px;
   width: 100px;
 
@@ -127,6 +130,16 @@ input[type=text] {
 #jsexhibition ul li {
   font-family: 'Roboto Condensed', sans-serif;
   font-size:16px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {box-shadow: 0px 0px 20px green;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {box-shadow: 0px 0px 20px green;}
 }
 
 @media (max-width: 400px) {
